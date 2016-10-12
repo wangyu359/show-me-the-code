@@ -18,7 +18,8 @@ def xls2json(file_path):
   d = OrderedDict()
   for i in range(sheet.nrows):
     values = sheet.row_values(i) # map(): do the same operation for each element
-    d[values[0]] = values[1:]
+    # d[values[0]] = values[1:]
+    d[values[0]] = values[1]
   return d
   
 class Make_xml(): # the parameter of class is for the base class
